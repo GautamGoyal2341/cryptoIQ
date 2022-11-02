@@ -1,9 +1,22 @@
-import React from 'react'
-
+import { Button, HStack } from "@chakra-ui/react";
+import React from "react";
+import { Link } from "react-router-dom";
 const header = () => {
   return (
-    <div>header</div>
-  )
-}
+    <HStack p={4} shadow={"base"} bgColor={"blackAlpha.900"}>
+      <Button variant={"unstyled"} color={"white"}>
+        <Link to="/">Home</Link>
+      </Button>
 
-export default header
+      <Button variant={"unstyled"} color={"white"}>
+        <Link to="/exhanges">Exchanges</Link>
+      </Button>
+
+      <Button variant={"unstyled"} color={"white"}>
+        <Link to="/coins">Coins</Link>
+      </Button> 
+    </HStack>
+  );
+};
+
+export default header;
