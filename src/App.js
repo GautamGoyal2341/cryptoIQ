@@ -1,6 +1,10 @@
 import React from 'react'
-import { BrowserRouter as Router , Routes , Route  } from 'react-router-dom'
-import Header from './components/header'
+import { BrowserRouter as Router , Routes , Route  } from 'react-router-dom';
+import Header from './components/header';
+import Home from  "./components/Home";
+import Coins from './components/Coins';
+import Exchanges from './components/Exchanges';
+import CoinDetails from './components/CoinDetails';
 function App()
 {
 
@@ -12,7 +16,11 @@ function App()
        <Header/>
             <Routes>
 
-            <Route/>
+            <Route  path='/' element = {<Home/>}/>
+            <Route  path='/coins' element = {<Coins/>}/>
+            <Route  path='/exchanges' element = {<Exchanges/>}/>
+            <Route  path='/coind/:id' element = {<CoinDetails/>}/>
+      
 
             </Routes>
 
