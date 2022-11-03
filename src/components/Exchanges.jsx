@@ -1,7 +1,8 @@
 import React , {useEffect , useState} from 'react'
 import axios from 'axios'
 import { server } from '../index'
-import { Container } from '@chakra-ui/react';
+import { Container, HStack } from '@chakra-ui/react';
+import Loader from './Loader';
 const Exchanges = () => {
 
      const [exchanges , setExchanges] = useState([]);
@@ -21,8 +22,29 @@ const Exchanges = () => {
       },[])
 
   return <Container maxW = {"container.xl"}>
+
+    {loading ? <Loader/> :  <> 
+      
+       <HStack wrap={"wrap"}>
+  
+           {
+            exchanges.map((i)=>(
+                <ExchangeCard/>
+            ))
+           }
+
+
+
+       </HStack>
+    
+    
+    </>}
      
   </Container>
 }
+
+const ExchangeCard  = () => (
+    
+)
 
 export default Exchanges;
