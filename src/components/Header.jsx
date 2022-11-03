@@ -9,7 +9,7 @@ const header = () => {
       </Button>
 
       <Button variant={"unstyled"} color={"white"}>
-        <Link to="/exhanges">Exchanges</Link>
+        <Link to="/exchanges">Exchanges</Link>
       </Button>
 
       <Button variant={"unstyled"} color={"white"}>
