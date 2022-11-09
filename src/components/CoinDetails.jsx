@@ -76,8 +76,35 @@ const CoinDetails = () => {
             />
             <Stat>
               <StatLabel>{coin.name}</StatLabel>
-              <StatNumber></StatNumber>
+              <StatNumber>
+                {coin.market_data.current_price[currency]}
+              </StatNumber>
+
+              <StatHelpText>
+                <StatArrow
+                  type={
+                    coin.market_data.price_change_percentage_24h > 0
+                      ? "increase"
+                      : "decrease"
+                  }
+                />
+                {coin.market_data.price_change_percentage_24h}%
+              </StatHelpText>
             </Stat>
+
+            <Badge
+             
+              fontSize={"2x1"}
+              bgColor = {"blackAlpha.800"}
+              color = {"white"}
+              
+            
+            ></Badge>
+
+
+
+
+
           </VStack>
         </>
       )}
